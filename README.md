@@ -1,16 +1,17 @@
 # xmmregion Project
 
-> A Python module designed to automate and streamline spectral extraction from complex and numerous X-ray regions in XMM-Newton observations.
+> A hybrid Bash-Python toolkit designed to streamline *diffuse X-ray* spectral extraction from complex and numerous X-ray regions in XMM-Newton observations.
 
 
 ## Overview
 
-The **Science Analysis System (SAS)** of ESA’s **X-ray Multi-Mirror Mission (XMM-Newton)** is a suite of tasks, scripts, and libraries developed to reduce and analyze observational data. It is built using C, Fortran, and Perl. Within SAS, the **XMM-Newton Extended Source Analysis Software (XMM-ESAS)** is specifically designed to handle diffuse X-ray emission.
+The **Science Analysis System (SAS)** of ESA’s **X-ray Multi-Mirror Mission (XMM-Newton)** is a collection of tasks, scripts, and libraries developed to reduce and analyze observational data. It is built using C, Fortran, and Perl. Within SAS, the **XMM-Newton Extended Source Analysis Software (XMM-ESAS)** is specifically designed to handle diffuse X-ray emission from various extended structures.
 
-However, XMM-ESAS faces a significant limitation: it cannot efficiently extract spectra from more than ~40 regions simultaneously. This becomes particularly challenging when working with complex, pixel-defined region files, such as those in studies of diffuse emission in the **Galactic Center’s Sgr B region**. In such cases, users may want to extract spectra from all non-black pixels (each representing a 30×30 arcsecond region on the sky), which is difficult to accomplish with ESAS alone—especially if each pixel is treated as an individual box region.
+However, XMM-ESAS has a significant limitation: it cannot efficiently extract diffuse spectra from more than approximately 40 regions simultaneously. This becomes particularly challenging when working with complex, pixel-defined region files. The following image shows an example from the Galactic Center’s Sgr B region. In this case, the user aims to extract spectra from all non-black pixels (each representing a 30×30 arcsecond area on the sky), which is difficult to achieve using ESAS alone.
+
 
 <p align="center">
-  <img src="assets/image.png" alt="Region Map of Sgr B Galactic Center" width="400"/>
+  <img src="assets/image.png" alt="Region Map of Sgr B Galactic Center for different OBSID" width="400"/>
 </p>
 
 
