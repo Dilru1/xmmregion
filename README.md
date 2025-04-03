@@ -89,7 +89,6 @@ xmmregion/
 ├── 020301020/           # Outputs directory
 ├── region_utils/        # Python scripts and modules
 ├── tests/               # Unit tests
-├── xmmvenv/             # Python virtual environment
 ├── main.sh              # Entry point script
 ├── requirements.txt     # Python dependencies
 └── README.md            # Project documentation
@@ -103,7 +102,7 @@ Run unit tests to verify project correctness:
 
 ```bash
 source xmmvenv/bin/activate
-python -m unittest discover tests
+pytest tests/ -v 
 ```
 ---
 
