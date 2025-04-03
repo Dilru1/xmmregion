@@ -2,6 +2,9 @@
 
 > Short and clear description of your xmmregion project's purpose.
 
+
+<img src="assets/image.png" alt="XMM Region Example" style="float: right; margin-left: 20px;" width="200"/>
+
 ---
 
 ## 🚀 Quick Start
