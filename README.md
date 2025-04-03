@@ -1,9 +1,13 @@
 # xmmregion Project
 
-> Short and clear description of your xmmregion project's purpose.
-
+The European Space Agency's (ESA) X-ray Multi-Mirror Mission (XMM-Newton) was launched by an Ariane 504 on December 10th 1999. XMM-Newton is ESA's second cornerstone of the Horizon 2000 Science Programme. It carries 3 high throughput X-ray telescopes with an unprecedented effective area, and an optical monitor, the first flown on a X-ray observatory. The large collecting area and ability to make long uninterrupted exposures provide highly sensitive observations.
 
 <img src="assets/image.png" alt="XMM Region Example" style="float: right; margin-left: 20px;" width="200"/>
+
+Since Earth's atmosphere blocks out all X-rays, only a telescope in space can detect and study celestial X-ray sources. The XMM-Newton mission is helping scientists to solve a number of cosmic mysteries, ranging from the enigmatic black holes to the origins of the Universe itself. Observing time on XMM-Newton is being made available to the scientific community, applying for observational periods on a competitive basis.
+
+Read more about the spacecraft, mirrors and instruments and about the XMM-Newton SOC.
+
 
 ---
 
