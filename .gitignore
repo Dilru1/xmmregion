@@ -1,0 +1,13 @@
+# Ignore virtual environments
+xmmvenv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore system files
+.DS_Store
+
+# Ignore data files or logs (if desired)
+#020301020/
+#data/
