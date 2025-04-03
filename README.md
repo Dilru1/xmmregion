@@ -97,9 +97,7 @@ xmmregion/
 
 ---
 
-## 📖 Detailed Usage
-
-### Running Tests
+## 📖 Running Tests
 
 Run unit tests to verify project correctness:
 
@@ -107,34 +105,14 @@ Run unit tests to verify project correctness:
 source xmmvenv/bin/activate
 python -m unittest discover tests
 ```
-
-### Customizing Inputs
-
-Data files can be placed or updated inside `data/`.
-
-### Outputs
-
-Outputs are stored in `020301020/` after running `./main.sh`.
-
 ---
 
 ## 🌐 Documentation
 
-- Detailed documentation available [here](https://Dilru1.github.io/xmmregion)
+- Detailed documentation available [here](https://Dilru1.github.io/xmmregion) (Alert: Work in progress !....)
 
 ---
 
-## 🛠 Contributing
-
-Contributions are welcome!
-
-1. Fork this repository
-2. Create a new branch: `git checkout -b feature-name`
-3. Commit your changes: `git commit -m 'Add new feature'`
-4. Push your changes: `git push origin feature-name`
-5. Open a pull request
-
----
 
 ## ⚖️ License
 
