@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Exit immediately on error, unset variables, or pipefail
+# Exit when error = True or unset variable = True or pipefail = True 
 set -euo pipefail
 trap 'echo "[ERROR] Script failed at line $LINENO"; exit 1' ERR
 
