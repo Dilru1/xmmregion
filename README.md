@@ -15,11 +15,42 @@ However, XMM-ESAS has a significant limitation: it cannot efficiently extract di
 </p>
 
 
+`xmmregion` is an automated toolkit developed to address this limitation. It streamlines the process of spectral extraction from a large number of region files (down to the pixel level) making it significantly easier to analyze spatially complex, extended X-ray sources. The toolkit is particularly useful in scenarios that require custom, pixel-by-pixel masking.
 
-`xmmregion` is a dedicated Python module created to address this limitation. It automates the process of spectral extraction from a large number of region files, making it significantly easier to analyze spatially complex, extended X-ray sources. It is especially useful for cases where custom, pixel-by-pixel masking is required.
+
+
+## Method
+
+The standard XMM-Newton spectral extraction pipeline using XMM-ESAS must be **paused** before region based filtering begins. This is where `xmmregion` takes over, providing automated preprocessing to generate region files based on pixel level masks.
+
+The workflow proceeds as follows:
+
+1. **Pause Standard Pipeline**  
+   Begin by stopping the standard XMM-Newton ESAS pipeline before region-based filtering starts (after `pn-filter` and `mos-filter`.
+
+2. **Create a Binary Pixel Mask (FITS file)**  
+   Generate a FITS image where each pixel has a value of `1` if it should be **excluded** from the spectral analysis.
+
+
+3. **Convert to Sky and Detector Coordinates**  
+   Convert this binary mask into Ds9 .reg files on XMM-Newton sky coordinates, and then into **detector coordinates**, while accounting for the orientation and rotation of the onboard EPIC cameras.
+
+4. **Apply Geometric Transformations**  
+   Use the `conv_reg` method to apply necessary camera rotations and transformations to align regions correctly in detector space.
+
+5. **Translate to FITS Tables with Metadata**  
+   Convert the region files (.reg) into special FITS tables that include relevant metadata needed by ESAS.
+
+7. **Resume ESAS Pipeline**  
+   Integrate the generated FITS region files into the standard ESAS workflow and continue spectral extraction as usual.
+
+
+This modular approach allows users to define hundreds of regions based on pixel-level masks and automate their integration into ESAS without manual region creation or editing. For the moment only `box, rot-box` and `circular` regions are possible. 
 
 
 ---
+
+
 
 ## 🚀 Quick Start
 
@@ -43,6 +74,10 @@ pip install -r requirements.txt
 ```bash
 ./main.sh
 ```
+
+
+Note: To run xmmregion successfully, you must have SAS (Science Analysis System) installed and configured on your system. Additionally, preprocessed XMM-Newton ODF (Observation Data Files) are required. If you don't have them, feel free to contact me at dilrushanka@gmail.com, and I’ll be happy to provide the necessary files.
+
 
 ---
 
@@ -103,5 +138,5 @@ Contributions are welcome!
 
 ## ⚖️ License
 
-MIT © Your Name
+© Dehiwalage Don Dilruwan ©dilrushanka@gmail.com
 
